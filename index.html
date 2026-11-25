@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alexis' Kerstlijst 2026 — Glass Wave</title>
+  <title>Kerstlijst &amp; Budget 2026 — SIC Corp</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -137,12 +137,12 @@
       <div class="flex items-center gap-2 sm:gap-3 min-w-0">
         <div id="userBadge" class="glass-btn px-3.5 py-2 rounded-full text-xs sm:text-sm font-extrabold tracking-wide text-sky-200 shrink-0">GUEST</div>
         <div class="mobile-top-brand hidden sm:hidden flex-col min-w-0">
-          <div class="text-xs font-bold text-white leading-tight truncate">Alexis' Kerstlijst</div>
+          <div class="text-xs font-bold text-white leading-tight truncate">SIC Corp</div>
           <div class="flex items-center gap-1.5 text-[11px] text-slate-300/85 leading-tight truncate"><span>Kerstmis</span><span class="floating-green-dot shrink-0" aria-hidden="true"></span><span>2026</span></div>
           <div class="text-[10px] font-semibold text-sky-300/90 leading-tight truncate">Glass Wave</div>
         </div>
         <div class="mobile-brand-card glass-card px-3.5 py-1.5 rounded-2xl min-w-0">
-          <div class="text-xs sm:text-sm font-bold text-white truncate">Alexis' Kerstlijst</div>
+          <div class="text-xs sm:text-sm font-bold text-white truncate">SIC Corp</div>
           <div id="headerSubStatus" class="text-[11px] text-slate-300/85 truncate">Kerstlijstje • 2026 • Lokaal</div>
         </div>
       </div>
@@ -166,7 +166,7 @@
       <section id="tab-lijst" class="tab-section space-y-5">
         <div class="flex items-center justify-between gap-2">
           <div class="min-w-0 flex-1">
-            <h1 class="mobile-section-title text-xl sm:text-2xl font-extrabold tracking-tight text-white">Alexis' Kerstlijst &amp; Budget</h1>
+            <h1 class="mobile-section-title text-xl sm:text-2xl font-extrabold tracking-tight text-white">Kerstlijst &amp; Budget</h1>
             <p class="text-xs sm:text-sm text-slate-300/80">Beheer je verlanglijst, budget en gedeelde items</p>
           </div>
           <div class="flex items-center gap-1.5 shrink-0">
@@ -240,7 +240,7 @@
           </div>
           <div class="space-y-1.5">
             <label for="shareNameInput" class="block text-xs font-extrabold uppercase tracking-wider text-amber-300">Naam* (verplicht)</label>
-            <input id="shareNameInput" type="text" placeholder="Bijv. Alexis" class="w-full glass-card rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-400/70 focus:outline-none focus:border-sky-400/60" />
+            <input id="shareNameInput" type="text" placeholder="Bijv. Royston" class="w-full glass-card rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-400/70 focus:outline-none focus:border-sky-400/60" />
           </div>
           <div class="flex flex-col sm:flex-row gap-2.5">
             <input id="shareCodeInput" type="text" placeholder="BIJV. GW-ABCD-EFGH-IJKL" class="flex-1 glass-card rounded-xl px-4 py-2.5 text-sm uppercase tracking-wider text-white placeholder-slate-400/70 focus:outline-none focus:border-sky-400/60" />
@@ -296,7 +296,7 @@
             </div>
             <input id="searchLogInput" type="text" placeholder="Zoek in activiteitenlog..." class="w-full glass-card rounded-xl px-4 py-2.5 text-xs sm:text-sm text-white placeholder-slate-400/75 focus:outline-none focus:border-sky-400/60" />
           </div>
-          <div id="logGateCard" class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-center gap-5 border-amber-400/35 hidden">
+          <div id="logGateCard" class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-center gap-5 border-amber-400/35">
             <div class="glass-error-triangle w-24 h-24 sm:w-28 sm:h-28 shrink-0 flex items-center justify-center" aria-hidden="true">
               <svg class="w-full h-full" viewBox="0 0 120 108" fill="none">
                 <defs>
@@ -314,7 +314,7 @@
               <p class="text-xs sm:text-sm text-slate-300/85 leading-relaxed">Ga naar het tabblad <span class="font-semibold text-white">Deelcode</span>, vul je <span class="font-semibold text-amber-300">Naam*</span> in en maak een nieuwe deelcode aan of join met een bestaande code om de activiteitenlogs te openen.</p>
             </div>
           </div>
-          <div id="activityLogList" class="space-y-2.5"></div>
+          <div id="activityLogList" class="hidden space-y-2.5"></div>
         </div>
       </section>
     </main>
@@ -449,7 +449,7 @@
     </div>
   </div>
   <script>
-    const STORAGE_KEY = 'gw_alexis_kerstlijst_2026_v1';
+    const STORAGE_KEY = 'gw_kerstlijst_2026_v2';
     const GW_API_BASE = (window.GW_API_BASE || '').replace(/\/$/, '');
     const GW_API_ENABLED = Boolean(GW_API_BASE);
     const GW_SYNC_DEBOUNCE_MS = 650;
@@ -582,7 +582,7 @@
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `alexis-kerstlijst-${new Date().toISOString().slice(0, 10)}.json`;
+      a.download = `kerstlijst-${new Date().toISOString().slice(0, 10)}.json`;
       document.body.appendChild(a); a.click(); a.remove();
       URL.revokeObjectURL(url);
       showToast('JSON-back-up geëxporteerd.');
@@ -645,7 +645,7 @@
     const CATEGORIES = ['Alles', 'Tech & Gear', 'DIY Smart Glasses', 'Gaming & Coins', 'Home & Living'];
 
     const DEFAULT_STATE = {
-      userName: 'Alexis',
+      userName: '',
       shareCode: '',
       budgetTarget: 400,
       selectedCategory: 'Alles',
@@ -669,7 +669,7 @@
       ],
       deletedItems: [],
       logs: [
-        { id: 'log-init-1', text: "Alexis' kerstlijst geladen met 11 items voor 2026.", time: '17:38' }
+        { id: 'log-init-1', text: "SIC Corp kerstlijst geladen met 11 items voor 2026.", time: '17:38' }
       ]
     };
     function loadState() {
@@ -965,15 +965,15 @@
       const subtitleEl = document.getElementById('logSubtitleText');
       const searchInput = document.getElementById('searchLogInput');
       if (searchInput && document.activeElement !== searchInput) searchInput.value = state.logSearchQuery || '';
-      const unlocked = true;
-      if (gateCard) gateCard.classList.add('hidden');
-      if (listEl) listEl.classList.remove('hidden');
+      const unlocked = hasValidName() && hasActiveShare();
+      if (gateCard) gateCard.classList.toggle('hidden', unlocked);
+      if (listEl) listEl.classList.toggle('hidden', !unlocked);
       if (subtitleEl) {
-        subtitleEl.textContent = hasValidName() && hasActiveShare()
+        subtitleEl.textContent = unlocked
           ? `Actieve log voor ${state.userName.trim()} • Code ${state.shareCode.trim()}`
-          : 'Lokale activiteitenlog (geen deelcode actief)';
+          : 'Toegang & voorwaarden voor logweergave';
       }
-      if (!listEl) return;
+      if (!unlocked || !listEl) return;
       const q = (state.logSearchQuery || '').trim().toLowerCase();
       const filteredLogs = state.logs.filter((entry) => {
         if (!q) return true;

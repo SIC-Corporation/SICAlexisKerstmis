@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alexis' Kerstlijst 2026 — Glass Wave</title>
+  <title>Kerstlijst &amp; Budget 2026 — SIC Corp</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +17,6 @@
       background-color: #050a14; color: #f8fafc; overflow-x: hidden;
     }
     body.world-locked { overflow: hidden !important; }
-
     #globeCanvasWrap {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
       background:
@@ -26,7 +25,6 @@
         linear-gradient(180deg, #050b18 0%, #040812 100%);
     }
     #globeCanvas { display: block; width: 100%; height: 100%; touch-action: none; }
-
     .glass-panel {
       position: relative;
       background:
@@ -35,10 +33,7 @@
         linear-gradient(155deg, rgba(16, 27, 48, 0.58), rgba(7, 13, 27, 0.78));
       backdrop-filter: blur(26px) saturate(165%);
       border: 1px solid rgba(186, 230, 253, 0.22);
-      box-shadow:
-        0 24px 56px rgba(0, 0, 0, 0.58),
-        0 0 0 1px rgba(255, 255, 255, 0.04) inset,
-        inset 0 1.5px 0 rgba(255, 255, 255, 0.26);
+      box-shadow: 0 24px 56px rgba(0, 0, 0, 0.58), 0 0 0 1px rgba(255, 255, 255, 0.04) inset, inset 0 1.5px 0 rgba(255, 255, 255, 0.26);
     }
     .glass-panel::before {
       content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
@@ -47,9 +42,7 @@
     }
     .glass-card {
       position: relative; overflow: hidden;
-      background:
-        linear-gradient(135deg, rgba(125, 211, 252, 0.11), transparent 48%),
-        linear-gradient(150deg, rgba(24, 37, 61, 0.56), rgba(11, 19, 36, 0.74));
+      background: linear-gradient(135deg, rgba(125, 211, 252, 0.11), transparent 48%), linear-gradient(150deg, rgba(24, 37, 61, 0.56), rgba(11, 19, 36, 0.74));
       backdrop-filter: blur(20px) saturate(150%);
       border: 1px solid rgba(186, 230, 253, 0.16);
       box-shadow: 0 10px 26px rgba(0, 0, 0, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.18);
@@ -92,50 +85,22 @@
     }
     .dock-pill {
       transition: transform 0.36s cubic-bezier(0.22, 1.18, 0.36, 1), width 0.36s cubic-bezier(0.22, 1.18, 0.36, 1);
-      background:
-        radial-gradient(120% 100% at 50% 0%, rgba(255, 255, 255, 0.32), transparent 65%),
-        linear-gradient(145deg, rgba(56, 189, 248, 0.34), rgba(14, 165, 233, 0.16));
+      background: radial-gradient(120% 100% at 50% 0%, rgba(255, 255, 255, 0.32), transparent 65%), linear-gradient(145deg, rgba(56, 189, 248, 0.34), rgba(14, 165, 233, 0.16));
       border: 1px solid rgba(186, 230, 253, 0.52);
       box-shadow: 0 4px 20px rgba(14, 165, 233, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.42);
     }
     #glassSheet { transition: transform 0.48s cubic-bezier(0.22, 1.15, 0.36, 1), opacity 0.34s ease, visibility 0.34s ease; }
-    #glassSheet.sheet-hidden-down {
-      transform: translateY(115vh) scale(0.97);
-      opacity: 0; visibility: hidden; pointer-events: none;
-    }
-    @keyframes glassTriangleBounce {
-      0%, 100% { transform: translateY(0) scale(1); }
-      45% { transform: translateY(-5px) scale(1.03); }
-    }
-    .glass-error-triangle {
-      animation: glassTriangleBounce 2.6s ease-in-out infinite;
-      filter: drop-shadow(0 6px 14px rgba(249, 115, 22, 0.35));
-    }
+    #glassSheet.sheet-hidden-down { transform: translateY(115vh) scale(0.97); opacity: 0; visibility: hidden; pointer-events: none; }
+    @keyframes glassTriangleBounce { 0%, 100% { transform: translateY(0) scale(1); } 45% { transform: translateY(-5px) scale(1.03); } }
+    .glass-error-triangle { animation: glassTriangleBounce 2.6s ease-in-out infinite; filter: drop-shadow(0 6px 14px rgba(249, 115, 22, 0.35)); }
     .gw-modal-backdrop { opacity: 0; visibility: hidden; transition: opacity 0.24s ease, visibility 0.24s ease; }
     .gw-modal-backdrop.is-open { opacity: 1; visibility: visible; }
-    .gw-modal-card {
-      transform: translateY(18px) scale(0.95); opacity: 0;
-      transition: transform 0.34s cubic-bezier(0.22, 1.2, 0.36, 1), opacity 0.24s ease;
-    }
+    .gw-modal-card { transform: translateY(18px) scale(0.95); opacity: 0; transition: transform 0.34s cubic-bezier(0.22, 1.2, 0.36, 1), opacity 0.24s ease; }
     .gw-modal-backdrop.is-open .gw-modal-card { transform: translateY(0) scale(1); opacity: 1; }
-    input[type="range"].gw-slider {
-      appearance: none; height: 7px; border-radius: 999px;
-      background: rgba(148, 163, 184, 0.22); outline: none;
-    }
-    input[type="range"].gw-slider::-webkit-slider-thumb {
-      appearance: none; width: 18px; height: 18px; border-radius: 50%;
-      background: #38bdf8; border: 2px solid #e0f2fe;
-      box-shadow: 0 0 12px rgba(56, 189, 248, 0.65); cursor: pointer;
-    }
-    @keyframes floatingGreenDot {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-2.5px); }
-    }
-    .floating-green-dot {
-      display: inline-block; width: 6px; height: 6px; border-radius: 9999px;
-      background-color: #34d399; box-shadow: 0 0 8px rgba(52, 211, 153, 0.85);
-      animation: floatingGreenDot 2.2s ease-in-out infinite;
-    }
+    input[type="range"].gw-slider { appearance: none; height: 7px; border-radius: 999px; background: rgba(148, 163, 184, 0.22); outline: none; }
+    input[type="range"].gw-slider::-webkit-slider-thumb { appearance: none; width: 18px; height: 18px; border-radius: 50%; background: #38bdf8; border: 2px solid #e0f2fe; box-shadow: 0 0 12px rgba(56, 189, 248, 0.65); cursor: pointer; }
+    @keyframes floatingGreenDot { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-2.5px); } }
+    .floating-green-dot { display: inline-block; width: 6px; height: 6px; border-radius: 9999px; background-color: #34d399; box-shadow: 0 0 8px rgba(52, 211, 153, 0.85); animation: floatingGreenDot 2.2s ease-in-out infinite; }
     @media (max-width: 639.98px) {
       .mobile-main-wrap { padding-left: 0.75rem !important; padding-right: 0.75rem !important; padding-top: 0.75rem !important; padding-bottom: 7.5rem !important; }
       .mobile-header-row { flex-wrap: nowrap; gap: 0.4rem !important; }
@@ -159,36 +124,28 @@
 </head>
 <body class="selection:bg-sky-500/30 selection:text-sky-100">
   <div id="globeCanvasWrap"><canvas id="globeCanvas"></canvas></div>
-
   <div id="worldModeBar" class="mobile-world-bar hidden fixed bottom-20 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3 px-4 py-2 rounded-full glass-panel">
     <span class="text-xs sm:text-sm font-medium text-sky-100 truncate">3D Kerstwereld</span>
     <button id="resetWorldCamBtn" type="button" class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/25 hover:bg-sky-500/35 border border-sky-300/40 text-sky-100 transition shrink-0">Centreer</button>
     <button id="restoreSheetFromBarBtn" type="button" class="px-3.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/25 hover:bg-emerald-500/35 border border-emerald-300/40 text-emerald-100 transition shrink-0">Toon lijst</button>
   </div>
-
   <div id="toastBanner" class="fixed top-20 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 translate-y-2 transition-all duration-300">
     <div id="toastText" class="px-4 py-2 rounded-full glass-panel text-xs sm:text-sm font-semibold text-sky-100"></div>
   </div>
-
   <div class="mobile-main-wrap relative z-10 min-h-screen flex flex-col justify-between px-3 sm:px-6 pt-4 pb-28 max-w-6xl mx-auto">
     <header class="mobile-header-row flex items-center justify-between gap-2 sm:gap-4">
       <div class="flex items-center gap-2 sm:gap-3 min-w-0">
         <div id="userBadge" class="glass-btn px-3.5 py-2 rounded-full text-xs sm:text-sm font-extrabold tracking-wide text-sky-200 shrink-0">GUEST</div>
         <div class="mobile-top-brand hidden sm:hidden flex-col min-w-0">
-          <div class="text-xs font-bold text-white leading-tight truncate">Alexis' Kerstlijst</div>
-          <div class="flex items-center gap-1.5 text-[11px] text-slate-300/85 leading-tight truncate">
-            <span>Kerstmis</span>
-            <span class="floating-green-dot shrink-0" aria-hidden="true"></span>
-            <span>2026</span>
-          </div>
+          <div class="text-xs font-bold text-white leading-tight truncate">SIC Corp</div>
+          <div class="flex items-center gap-1.5 text-[11px] text-slate-300/85 leading-tight truncate"><span>Kerstmis</span><span class="floating-green-dot shrink-0" aria-hidden="true"></span><span>2026</span></div>
           <div class="text-[10px] font-semibold text-sky-300/90 leading-tight truncate">Glass Wave</div>
         </div>
         <div class="mobile-brand-card glass-card px-3.5 py-1.5 rounded-2xl min-w-0">
-          <div class="text-xs sm:text-sm font-bold text-white truncate">Alexis' Kerstlijst</div>
-          <div id="headerSubStatus" class="text-[11px] text-slate-300/85 truncate">Kerstlijstje • 2026 • Lokaal</div>
+          <div class="text-xs sm:text-sm font-bold text-white truncate">SIC Corp</div>
+          <div id="headerSubStatus" class="text-[11px] text-slate-300/85 truncate">Alexis' Kerstlijstje • 2026 • Lokaal</div>
         </div>
       </div>
-
       <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
         <button id="openTrashBtn" type="button" title="Prullenbak (verwijderde items)" class="relative glass-btn w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center text-white shrink-0">
           <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 6h18M8 6V4h8v2m-9 0l1 14h8l1-14" /></svg>
@@ -201,17 +158,15 @@
         <button id="openAddModalBtn" type="button" title="Nieuw item toevoegen" class="glass-btn w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center text-sky-200 font-bold text-lg sm:text-xl shrink-0">+</button>
       </div>
     </header>
-
     <main id="glassSheet" class="mobile-sheet glass-panel rounded-[28px] sm:rounded-[34px] p-4 sm:p-7 mt-5 w-full max-w-5xl mx-auto">
       <div class="flex flex-col items-center mb-4">
         <div id="sheetDragHandle" role="slider" tabindex="0" aria-label="Sleep omlaag om de wereld te bekijken" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" class="w-16 h-2 rounded-full bg-slate-300/45 hover:bg-sky-300/80 cursor-ns-resize transition"></div>
         <span class="mt-1.5 text-[11px] text-slate-300/75 text-center">Sleep omlaag of klik om de wereld te bekijken</span>
       </div>
-
       <section id="tab-lijst" class="tab-section space-y-5">
         <div class="flex items-center justify-between gap-2">
           <div class="min-w-0 flex-1">
-            <h1 class="mobile-section-title text-xl sm:text-2xl font-extrabold tracking-tight text-white">Alexis' Kerstlijst &amp; Budget</h1>
+            <h1 class="mobile-section-title text-xl sm:text-2xl font-extrabold tracking-tight text-white">Kerstlijst &amp; Budget</h1>
             <p class="text-xs sm:text-sm text-slate-300/80">Beheer je verlanglijst, budget en gedeelde items</p>
           </div>
           <div class="flex items-center gap-1.5 shrink-0">
@@ -223,7 +178,6 @@
             <span id="itemCountPill" class="mobile-count-pill px-3.5 py-1.5 rounded-full text-xs font-bold glass-card text-sky-200 shrink-0">0 items</span>
           </div>
         </div>
-
         <div class="mobile-name-box glass-card rounded-2xl px-4 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div class="mobile-name-top flex items-center gap-2.5 flex-1 min-w-0">
             <label for="quickNameInput" class="text-[11px] font-extrabold uppercase tracking-wider text-sky-300 shrink-0">Jouw naam</label>
@@ -231,7 +185,6 @@
           </div>
           <span id="syncModeTag" class="text-[11px] sm:text-xs font-semibold text-slate-300/80 shrink-0">Alleen lokaal</span>
         </div>
-
         <div class="glass-card rounded-2xl p-4 sm:p-5 space-y-4">
           <div class="flex flex-wrap items-start justify-between gap-3">
             <div>
@@ -260,7 +213,6 @@
             </div>
           </div>
         </div>
-
         <div class="flex flex-col sm:flex-row gap-3">
           <input id="searchItemInput" type="text" placeholder="Zoek op naam of notitie..." class="flex-1 glass-card rounded-2xl px-4 py-2.5 text-sm text-white placeholder-slate-400/75 focus:outline-none focus:border-sky-400/60" />
           <select id="sortItemsSelect" class="glass-card rounded-2xl px-4 py-2.5 text-sm font-semibold text-white bg-slate-900/80 focus:outline-none focus:border-sky-400/60">
@@ -270,11 +222,9 @@
             <option value="name-asc">Naam: A - Z</option>
           </select>
         </div>
-
         <div id="categoryFilterRow" class="mobile-cat-row flex items-center gap-2 overflow-x-auto pb-1"></div>
         <div id="wishlistItemsContainer" class="space-y-3"></div>
       </section>
-
       <section id="tab-deelcode" class="tab-section hidden space-y-5">
         <div class="flex items-center justify-between gap-2.5">
           <div class="min-w-0">
@@ -283,7 +233,6 @@
           </div>
           <span id="shareItemCountPill" class="mobile-count-pill px-3.5 py-1.5 rounded-full text-xs font-bold glass-card text-sky-200 shrink-0">0 items</span>
         </div>
-
         <div class="glass-card rounded-2xl p-4 sm:p-6 space-y-4">
           <div>
             <h3 class="text-base sm:text-lg font-bold text-white">Gedeelde Kerstlijst (Deelcode)</h3>
@@ -312,17 +261,12 @@
           </div>
           <p class="text-[11px] text-slate-400/80">Back-up of herstel van je lijst. Deelcodes synchroniseren online via de SIC Corp API.</p>
         </div>
-
         <div class="glass-card rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center gap-4 border-amber-400/30">
           <div class="glass-error-triangle w-16 h-16 sm:w-20 sm:h-20 shrink-0 flex items-center justify-center" aria-hidden="true">
             <svg class="w-full h-full" viewBox="0 0 120 108" fill="none">
               <defs>
-                <linearGradient id="gwTriStrokeDeel" x1="20" y1="12" x2="100" y2="96" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#ffa952" /><stop offset="50%" stop-color="#f97316" /><stop offset="100%" stop-color="#b43b08" />
-                </linearGradient>
-                <linearGradient id="gwTriExclaimDeel" x1="60" y1="30" x2="60" y2="86" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#ff9933" /><stop offset="100%" stop-color="#e04f06" />
-                </linearGradient>
+                <linearGradient id="gwTriStrokeDeel" x1="20" y1="12" x2="100" y2="96" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ffa952" /><stop offset="50%" stop-color="#f97316" /><stop offset="100%" stop-color="#b43b08" /></linearGradient>
+                <linearGradient id="gwTriExclaimDeel" x1="60" y1="30" x2="60" y2="86" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff9933" /><stop offset="100%" stop-color="#e04f06" /></linearGradient>
               </defs>
               <path d="M52.5 14.2c3.35-5.8 11.65-5.8 15 0l39.2 67.8c3.35 5.8-.84 13.05-7.5 13.05H20.8c-6.66 0-10.85-7.25-7.5-13.05l39.2-67.8Z" stroke="url(#gwTriStrokeDeel)" stroke-width="11.5" stroke-linejoin="round" />
               <path d="M54.2 13.8 C57.2 9.6, 62.8 9.6, 65.8 13.8" stroke="#fff7ed" stroke-opacity="0.72" stroke-width="3.6" stroke-linecap="round" />
@@ -336,7 +280,6 @@
           </div>
         </div>
       </section>
-
       <section id="tab-log" class="tab-section hidden space-y-5">
         <div class="flex items-center justify-between gap-2.5">
           <div class="min-w-0">
@@ -345,7 +288,6 @@
           </div>
           <span id="logItemCountPill" class="mobile-count-pill px-3.5 py-1.5 rounded-full text-xs font-bold glass-card text-sky-200 shrink-0">0 items</span>
         </div>
-
         <div class="glass-card rounded-2xl p-4 sm:p-6 space-y-4">
           <div class="space-y-3">
             <div>
@@ -354,17 +296,12 @@
             </div>
             <input id="searchLogInput" type="text" placeholder="Zoek in activiteitenlog..." class="w-full glass-card rounded-xl px-4 py-2.5 text-xs sm:text-sm text-white placeholder-slate-400/75 focus:outline-none focus:border-sky-400/60" />
           </div>
-
-          <div id="logGateCard" class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-center gap-5 border-amber-400/35 hidden">
+          <div id="logGateCard" class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-center gap-5 border-amber-400/35">
             <div class="glass-error-triangle w-24 h-24 sm:w-28 sm:h-28 shrink-0 flex items-center justify-center" aria-hidden="true">
               <svg class="w-full h-full" viewBox="0 0 120 108" fill="none">
                 <defs>
-                  <linearGradient id="gwTriStrokeLog" x1="20" y1="12" x2="100" y2="96" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stop-color="#ffa952" /><stop offset="50%" stop-color="#f97316" /><stop offset="100%" stop-color="#b43b08" />
-                  </linearGradient>
-                  <linearGradient id="gwTriExclaimLog" x1="60" y1="30" x2="60" y2="86" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stop-color="#ff9933" /><stop offset="100%" stop-color="#e04f06" />
-                  </linearGradient>
+                  <linearGradient id="gwTriStrokeLog" x1="20" y1="12" x2="100" y2="96" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ffa952" /><stop offset="50%" stop-color="#f97316" /><stop offset="100%" stop-color="#b43b08" /></linearGradient>
+                  <linearGradient id="gwTriExclaimLog" x1="60" y1="30" x2="60" y2="86" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff9933" /><stop offset="100%" stop-color="#e04f06" /></linearGradient>
                 </defs>
                 <path d="M52.5 14.2c3.35-5.8 11.65-5.8 15 0l39.2 67.8c3.35 5.8-.84 13.05-7.5 13.05H20.8c-6.66 0-10.85-7.25-7.5-13.05l39.2-67.8Z" stroke="url(#gwTriStrokeLog)" stroke-width="11.5" stroke-linejoin="round" />
                 <path d="M54.2 13.8 C57.2 9.6, 62.8 9.6, 65.8 13.8" stroke="#fff7ed" stroke-opacity="0.72" stroke-width="3.6" stroke-linecap="round" />
@@ -377,13 +314,11 @@
               <p class="text-xs sm:text-sm text-slate-300/85 leading-relaxed">Ga naar het tabblad <span class="font-semibold text-white">Deelcode</span>, vul je <span class="font-semibold text-amber-300">Naam*</span> in en maak een nieuwe deelcode aan of join met een bestaande code om de activiteitenlogs te openen.</p>
             </div>
           </div>
-
-          <div id="activityLogList" class="space-y-2.5"></div>
+          <div id="activityLogList" class="hidden space-y-2.5"></div>
         </div>
       </section>
     </main>
   </div>
-
   <nav aria-label="Hoofdnavigatie" class="mobile-dock-wrap fixed bottom-4 left-1/2 -translate-x-1/2 z-30">
     <div id="bottomDock" class="relative glass-panel rounded-full p-1.5 flex items-center gap-1">
       <div id="dockPill" class="dock-pill absolute top-1.5 bottom-1.5 left-1.5 rounded-full pointer-events-none"></div>
@@ -392,7 +327,6 @@
       <button type="button" data-tab-target="log" class="dock-tab-btn relative z-10 px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-bold text-slate-300">Log</button>
     </div>
   </nav>
-
   <div id="addItemModal" class="gw-modal-backdrop fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-sm flex items-center justify-center p-4">
     <div id="addItemCard" class="gw-modal-card glass-panel rounded-3xl w-full max-w-lg p-5 sm:p-6 space-y-4">
       <div class="flex items-center justify-between">
@@ -437,7 +371,6 @@
       </form>
     </div>
   </div>
-
   <div id="detailModal" class="gw-modal-backdrop fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-sm flex items-center justify-center p-4">
     <div id="detailCard" class="gw-modal-card glass-panel rounded-3xl w-full max-w-md p-5 sm:p-6 space-y-4">
       <div class="flex items-start justify-between gap-3">
@@ -454,18 +387,13 @@
       </div>
     </div>
   </div>
-
   <div id="deleteConfirmModal" class="gw-modal-backdrop fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-sm flex items-center justify-center p-4">
     <div id="deleteConfirmCard" class="gw-modal-card glass-panel rounded-3xl w-full max-w-md p-6 text-center space-y-5">
       <div class="glass-error-triangle w-20 h-20 mx-auto flex items-center justify-center" aria-hidden="true">
         <svg class="w-full h-full" viewBox="0 0 120 108" fill="none">
           <defs>
-            <linearGradient id="gwTriStrokeDel" x1="20" y1="12" x2="100" y2="96" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#ffa952" /><stop offset="50%" stop-color="#f97316" /><stop offset="100%" stop-color="#b43b08" />
-            </linearGradient>
-            <linearGradient id="gwTriExclaimDel" x1="60" y1="30" x2="60" y2="86" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#ff9933" /><stop offset="100%" stop-color="#e04f06" />
-            </linearGradient>
+            <linearGradient id="gwTriStrokeDel" x1="20" y1="12" x2="100" y2="96" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ffa952" /><stop offset="50%" stop-color="#f97316" /><stop offset="100%" stop-color="#b43b08" /></linearGradient>
+            <linearGradient id="gwTriExclaimDel" x1="60" y1="30" x2="60" y2="86" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff9933" /><stop offset="100%" stop-color="#e04f06" /></linearGradient>
           </defs>
           <path d="M52.5 14.2c3.35-5.8 11.65-5.8 15 0l39.2 67.8c3.35 5.8-.84 13.05-7.5 13.05H20.8c-6.66 0-10.85-7.25-7.5-13.05l39.2-67.8Z" stroke="url(#gwTriStrokeDel)" stroke-width="11.5" stroke-linejoin="round" />
           <path d="M54.2 13.8 C57.2 9.6, 62.8 9.6, 65.8 13.8" stroke="#fff7ed" stroke-opacity="0.72" stroke-width="3.6" stroke-linecap="round" />
@@ -483,18 +411,13 @@
       </div>
     </div>
   </div>
-
   <div id="leaveShareConfirmModal" class="gw-modal-backdrop fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-sm flex items-center justify-center p-4">
     <div id="leaveShareConfirmCard" class="gw-modal-card glass-panel rounded-3xl w-full max-w-md p-6 text-center space-y-5">
       <div class="glass-error-triangle w-20 h-20 mx-auto flex items-center justify-center" aria-hidden="true">
         <svg class="w-full h-full" viewBox="0 0 120 108" fill="none">
           <defs>
-            <linearGradient id="gwTriStrokeLeave" x1="20" y1="12" x2="100" y2="96" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#ffa952" /><stop offset="50%" stop-color="#f97316" /><stop offset="100%" stop-color="#b43b08" />
-            </linearGradient>
-            <linearGradient id="gwTriExclaimLeave" x1="60" y1="30" x2="60" y2="86" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#ff9933" /><stop offset="100%" stop-color="#e04f06" />
-            </linearGradient>
+            <linearGradient id="gwTriStrokeLeave" x1="20" y1="12" x2="100" y2="96" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ffa952" /><stop offset="50%" stop-color="#f97316" /><stop offset="100%" stop-color="#b43b08" /></linearGradient>
+            <linearGradient id="gwTriExclaimLeave" x1="60" y1="30" x2="60" y2="86" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff9933" /><stop offset="100%" stop-color="#e04f06" /></linearGradient>
           </defs>
           <path d="M52.5 14.2c3.35-5.8 11.65-5.8 15 0l39.2 67.8c3.35 5.8-.84 13.05-7.5 13.05H20.8c-6.66 0-10.85-7.25-7.5-13.05l39.2-67.8Z" stroke="url(#gwTriStrokeLeave)" stroke-width="11.5" stroke-linejoin="round" />
           <path d="M54.2 13.8 C57.2 9.6, 62.8 9.6, 65.8 13.8" stroke="#fff7ed" stroke-opacity="0.72" stroke-width="3.6" stroke-linecap="round" />
@@ -512,7 +435,6 @@
       </div>
     </div>
   </div>
-
   <div id="deletedItemsModal" class="gw-modal-backdrop fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-sm flex items-center justify-center p-4">
     <div id="deletedItemsCard" class="gw-modal-card glass-panel rounded-3xl w-full max-w-lg p-5 sm:p-6 space-y-4 max-h-[82vh] flex flex-col">
       <div class="flex items-center justify-between gap-3">
@@ -526,9 +448,8 @@
       <div id="deletedItemsList" class="space-y-2.5 overflow-y-auto flex-1 pr-1"></div>
     </div>
   </div>
-
   <script>
-    const STORAGE_KEY = 'gw_alexis_kerstlijst_2026_v1';
+    const STORAGE_KEY = 'gw_kerstlijst_2026_v2';
     const GW_API_BASE = (window.GW_API_BASE || '').replace(/\/$/, '');
     const GW_API_ENABLED = Boolean(GW_API_BASE);
     const GW_SYNC_DEBOUNCE_MS = 650;
@@ -538,12 +459,10 @@
     let gwApplyingRemote = false;
     let gwShareVersion = 0;
     let gwLastSyncAt = 0;
-
     function gwTokenStorageKey(code) { return `gw_share_token_${String(code || '').toUpperCase()}`; }
     function gwGetShareToken(code = state.shareCode) { try { return localStorage.getItem(gwTokenStorageKey(code)) || ''; } catch (_) { return ''; } }
     function gwSetShareToken(code, token) { try { localStorage.setItem(gwTokenStorageKey(code), token); } catch (_) { showToast('Kon de beveiligde toegangssleutel niet lokaal opslaan.'); } }
     function gwRemoveShareToken(code) { try { localStorage.removeItem(gwTokenStorageKey(code)); } catch (_) {} }
-
     async function gwApi(path, options = {}) {
       if (!GW_API_ENABLED) throw new Error('De API is nog niet ingesteld. Configureer GW_API_BASE in index.html.');
       const headers = { 'Content-Type': 'application/json', ...(options.headers || {}) };
@@ -557,7 +476,6 @@
       }
       return body;
     }
-
     function gwSharedPayload() {
       return {
         budgetTarget: Number(state.budgetTarget) || 400,
@@ -566,7 +484,6 @@
         logs: Array.isArray(state.logs) ? state.logs.slice(0, 60) : []
       };
     }
-
     function gwApplySharedPayload(payload) {
       if (!payload || typeof payload !== 'object') throw new Error('De server stuurde ongeldige lijstgegevens.');
       gwApplyingRemote = true;
@@ -581,13 +498,11 @@
       renderDeletedModal();
       renderActivityLog();
     }
-
     function gwScheduleSync() {
       if (!GW_API_ENABLED || gwApplyingRemote || !hasActiveShare() || !gwGetShareToken()) return;
       clearTimeout(gwSyncTimer);
       gwSyncTimer = setTimeout(() => gwPushSharedState(), GW_SYNC_DEBOUNCE_MS);
     }
-
     async function gwPushSharedState() {
       if (!GW_API_ENABLED || gwApplyingRemote || gwSyncInProgress || !hasActiveShare()) return;
       const token = gwGetShareToken();
@@ -607,13 +522,11 @@
         gwSyncInProgress = false;
       }
     }
-
     async function gwPullSharedState() {
       const result = await gwApi(`/api/shares/${encodeURIComponent(state.shareCode)}/state`, { method: 'GET' });
       gwShareVersion = result.version || 0;
       gwApplySharedPayload(result.state);
     }
-
     async function gwPollSharedState() {
       if (!GW_API_ENABLED || !hasActiveShare() || !gwGetShareToken() || gwSyncInProgress) return;
       try {
@@ -627,7 +540,6 @@
         console.warn('Glass Wave polling:', error);
       }
     }
-
     async function gwCreateShare(name) {
       const result = await gwApi('/api/shares', {
         method: 'POST',
@@ -643,7 +555,6 @@
       renderActivityLog();
       showToast(`Deelcode aangemaakt: ${result.code}`);
     }
-
     async function gwJoinShare(name, code) {
       const result = await gwApi(`/api/shares/${encodeURIComponent(code)}/join`, {
         method: 'POST',
@@ -660,7 +571,6 @@
       renderActivityLog();
       showToast(`Verbonden met ${result.code}.`);
     }
-
     function gwExportJson() {
       const backup = {
         format: 'sic-corp-glass-wave-wishlist',
@@ -672,12 +582,11 @@
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `alexis-kerstlijst-${new Date().toISOString().slice(0, 10)}.json`;
+      a.download = `kerstlijst-${new Date().toISOString().slice(0, 10)}.json`;
       document.body.appendChild(a); a.click(); a.remove();
       URL.revokeObjectURL(url);
       showToast('JSON-back-up geëxporteerd.');
     }
-
     function gwValidateImportedItem(item) {
       if (!item || typeof item !== 'object' || Array.isArray(item)) return null;
       const name = String(item.name || '').trim().slice(0, 120);
@@ -701,7 +610,6 @@
         surpriseShare: Boolean(item.surpriseShare)
       };
     }
-
     async function gwImportJson(file) {
       if (!file) return;
       if (file.size > GW_MAX_IMPORT_BYTES) throw new Error('Het JSON-bestand is groter dan 1 MB.');
@@ -734,11 +642,10 @@
       await gwPushSharedState();
       showToast('JSON-back-up geïmporteerd.');
     }
-
     const CATEGORIES = ['Alles', 'Tech & Gear', 'DIY Smart Glasses', 'Gaming & Coins', 'Home & Living'];
 
     const DEFAULT_STATE = {
-      userName: 'Alexis',
+      userName: '',
       shareCode: '',
       budgetTarget: 400,
       selectedCategory: 'Alles',
@@ -748,25 +655,23 @@
       sortBy: 'default',
       worldHidden: false,
       items: [
-        { id: 'item-1', name: 'Redragon M913 Impact Elite Wireless Gaming Muis', price: 54.99, category: 'Tech & Gear', link: 'https://www.amazon.nl/-/en/Redragon-M913-Wireless-Programmable-Operation/dp/B088B3ZM76/ref=sr_1_1?ar_srct=T1&ar_su=https%3A%2F%2Fwww.amazon.co.uk%2Fdp%2FB088B3ZM76%3FlinkCode%3Dosi%26psc%3D1%26ascsubtag%3D23587324461%26th%3D1%26tag%3Dceukreviews-21%26creatorsDisableRedirect%3Dtrue&creatorsDisableRedirect=true&sr=8-1', note: 'Draadloze/bedrade MMO gaming muis met 16.000 DPI, 16 programmeerbare knoppen en RGB.', checked: false, surpriseShare: false },
-        { id: 'item-2', name: 'Eleganzzz Dekbedovertrek Flanel Fleece Dark Grey (200x200/220)', price: 34.95, category: 'Home & Living', link: 'https://www.bol.com/nl/nl/p/eleganzzz-dekbedovertrek-flanel-fleece-dark-grey-dekbedovertrek-200x200-220cm-100-flanel-fleece-tweepersoons-dekbedovertrekken/9300000161238083/', note: '100% flanel fleece tweepersoons dekbedovertrek in Dark Grey (200x200/220 cm).', checked: false, surpriseShare: false },
-        { id: 'item-3', name: 'Grand Theft Auto 6 (GTA VI) — Xbox Series X|S', price: 79.99, category: 'Gaming & Coins', link: 'https://www.mediamarkt.nl/nl/product/_grand-theft-auto-6-gta-vi-xbox-series-xs-code-in-a-box-1916873.html', note: 'Xbox Series X|S (Code in a box) via MediaMarkt.', checked: false, surpriseShare: false },
-        { id: 'item-4', name: 'Microsoft Xbox Series X 1TB + Forza Horizon 5 & Qware Bundel', price: 629.99, category: 'Gaming & Coins', link: 'https://www.mediamarkt.nl/nl/product/_microsoft-xbox-series-x-1tb-forza-horizon-5-qware-headset-qware-dual-charger-1722909.html', note: 'Xbox Series X 1TB console inclusief Forza Horizon 5, Qware Headset en Dual Charger.', checked: false, surpriseShare: false },
-        { id: 'item-5', name: 'Xiaomi Redmi Pad 2 WiFi 8GB/256GB — Grijs', price: 229.0, category: 'Tech & Gear', link: 'https://www.bol.com/nl/nl/p/xiaomi-redmi-pad-2-wifi-8gb-256gb-grijs/9300000240365179/', note: '11" 2.5K display, 8GB RAM, 256GB opslag en 9000mAh batterij.', checked: false, surpriseShare: false },
-        { id: 'item-6', name: 'Xiaomi Precision Screwdriver Kit (24-delig)', price: 19.99, category: 'DIY Smart Glasses', link: 'https://www.amazon.nl/Xiaomi-MJJXLSD002QW-Precision-Screwdriver-Kit/dp/B08MV2H7KD', note: 'Aluminium precisieschroevendraaierset met 24 magnetische bits voor elektronica & DIY.', checked: false, surpriseShare: false },
-        { id: 'item-7', name: 'Robux (Roblox Digitaal Variabel)', price: 10.0, category: 'Gaming & Coins', link: 'https://www.primera.nl/roblox-digitaal-variabel', note: 'Digitale Roblox-kaart / Robux via Primera.', checked: false, surpriseShare: false },
-        { id: 'item-8', name: 'Luduvo Lunes', price: 10.0, category: 'DIY Smart Glasses', link: 'https://luduvo.com/store', note: 'Luduvo Lunes via de officiële Luduvo store.', checked: false, surpriseShare: false },
-        { id: 'item-9', name: '2-in-1 Galaxy Projector Nachtlampje & Sterrenprojector', price: 19.95, category: 'Home & Living', link: 'https://www.bol.com/nl/nl/p/2-in-1-galaxy-projector-nachtlampje-usb-sterrenprojector-met-3-soorten-projectiefilms-instelbare-helderheid-mini-lichtprojector-voor-plafond-muur-en-slaapkamerdecoratie/9300000344280991/', note: 'USB sterren- en galaxy projector met 3 projectiefilms en instelbare helderheid voor plafond en muur.', checked: false, surpriseShare: false },
-        { id: 'item-10', name: 'Google One AI Pro / 400GB — 3 maanden', price: 4.92, category: 'Tech & Gear', link: 'https://one.google.com/intl/nl_nl/about/google-ai-plans/', note: '3 maanden Google One (400 GB à €1,64/mnd = €4,92 totaal).', checked: false, surpriseShare: false },
-        { id: 'item-11', name: 'Samsung Galaxy S22 Ultra (Tradera)', price: 274.13, category: 'Tech & Gear', link: 'https://www.tradera.com/nl/item/260103/761999976/samsung-galaxy-s22-ultra', note: 'Samsung Galaxy S22 Ultra listing via Tradera.', checked: false, surpriseShare: false },
-        { id: 'item-12', name: 'Samsung GT-I5510 (Tradera)', price: 0, category: 'Tech & Gear', link: 'https://www.tradera.com/nl/item/260103/761074838/samsung-gt-i5510', note: 'Samsung GT-I5510 slider-telefoon listing via Tradera.', checked: false, surpriseShare: false }
+        { id: 'item-1', name: 'GoPro + Hoofdband', price: 0, category: 'Tech & Gear', link: 'https://www.bol.com/nl/nl/p/hoofdband-voor-gopro/9300000226327024/', note: 'GoPro (maat die bij de hoofdband past) + Hoofdband voor GoPro.', checked: false, surpriseShare: false },
+        { id: 'item-2', name: 'Action Camera Full HD 1080P (Roze)', price: 22.90, category: 'Tech & Gear', link: 'https://www.bol.com/nl/nl/p/camera-action-camera-full-hd-1080p-waterdichte-onderwatercamera-30m-sportcamera-met-140-groothoeklens-en-2-0-inch-ips-scherm-motorhelm-camera-met-3-uur-batterijduur-inclusief-accessoireset-roze/9300000294883536/', note: 'Waterdichte onderwatercamera 30m, 140° groothoeklens, 2.0 Inch IPS scherm, 3 uur batterijduur, inclusief accessoireset.', checked: false, surpriseShare: false },
+        { id: 'item-3', name: 'Tate McRae Parfum 100ml', price: 0, category: 'Home & Living', link: 'https://www.tatebytm.com/en-eu/products/eau-de-parfum-uk-eu?Format=100+ml', note: 'Eau de Parfum (100 ml) via tatebytm.com.', checked: false, surpriseShare: false },
+        { id: 'item-4', name: 'Navelpiercing', price: 0, category: 'Home & Living', link: '', note: 'Navelpiercing (geen link opgegeven).', checked: false, surpriseShare: false },
+        { id: 'item-5', name: 'Suprême Hoodie', price: 0, category: 'Home & Living', link: 'https://www.varetti.com/', note: 'Supreme hoodie via varettiwear.com.', checked: false, surpriseShare: false },
+        { id: 'item-6', name: 'NYX Professional Makeup Jumbo Highlighter - Ice Cream', price: 8.99, category: 'Home & Living', link: 'https://www.amazon.nl/', note: 'Highlighter via amazon.nl.', checked: false, surpriseShare: false },
+        { id: 'item-7', name: 'Saint Laurent Parfum + Lippestift', price: 0, category: 'Home & Living', link: 'https://voordeelshop.ah.nl/', note: 'Parfum + lippenstift via Albert Heijn Voordeelshop.', checked: false, surpriseShare: false },
+        { id: 'item-8', name: 'Jellycat Blossom Blush Bunny "Cherry"', price: 0, category: 'Home & Living', link: 'https://eu.jellycat.com/blossom-blush-bunny-cherry/?sku=BPS6EC', note: 'Jellycat knuffel via eu.jellycat.com.', checked: false, surpriseShare: false },
+        { id: 'item-9', name: 'Spray voor Sven zijn manen (Sectolin Equishine)', price: 0, category: 'Home & Living', link: 'https://www.welkoop.nl/sectolin-equishine-antiklit-en-glasspray-paard-original-1l_1408658', note: 'Antiklit en glansspray voor paarden (1L) via Welkoop.', checked: false, surpriseShare: false },
+        { id: 'item-10', name: 'Carolina Herrera Parfum Set', price: 0, category: 'Home & Living', link: 'https://www.kieskeurig.nl/', note: 'Parfum set via kieskeurig.nl.', checked: false, surpriseShare: false },
+        { id: 'item-11', name: 'Eten Mini Fridge (Roze / Olvy)', price: 0, category: 'Home & Living', link: 'https://retourdeal.nl/products/mini-koelkast-skincare-fridge-frigobox-4-liter-roze-olvy?variant=53164115689799', note: 'Mini koelkast / skincare fridge / frigobox 4 liter roze via retourdeal.nl.', checked: false, surpriseShare: false }
       ],
       deletedItems: [],
       logs: [
-        { id: 'log-init-1', text: "Alexis' kerstlijst geladen met 12 items voor 2026.", time: '17:38' }
+        { id: 'log-init-1', text: "SIC Corp kerstlijst geladen met 11 items voor 2026.", time: '17:38' }
       ]
     };
-
     function loadState() {
       try {
         const raw = localStorage.getItem(STORAGE_KEY);
@@ -785,26 +690,21 @@
         return structuredClone(DEFAULT_STATE);
       }
     }
-
     let state = loadState();
     let pendingDeleteId = null;
     let pendingLeaveShareCode = false;
     let currentDetailLink = '';
-
     function saveState() {
       try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
       catch (err) { console.error('Fout bij opslaan van state:', err); }
       gwScheduleSync();
     }
-
     function formatEuro(amount) { const num = Number(amount) || 0; return '€' + num.toFixed(2).replace('.', ','); }
     function currentTimeStr() { return new Date().toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' }); }
-
     function addLogEntry(text) {
       state.logs.unshift({ id: 'log-' + Date.now() + '-' + Math.random().toString(36).slice(2, 6), text, time: currentTimeStr() });
       if (state.logs.length > 60) state.logs = state.logs.slice(0, 60);
     }
-
     function getDisplayBadge() {
       const clean = (state.userName || '').trim();
       if (!clean) return 'GUEST';
@@ -826,7 +726,6 @@
         if (!win) window.location.assign(safeUrl);
       } catch (_) { showToast(`Link: ${safeUrl}`); }
     }
-
     let toastTimer = null;
     function showToast(message) {
       const banner = document.getElementById('toastBanner');
@@ -841,7 +740,6 @@
         banner.classList.add('opacity-0', 'translate-y-2');
       }, 2600);
     }
-
     function openAnimatedModal(backdropId, cardId) {
       const backdrop = document.getElementById(backdropId);
       const card = document.getElementById(cardId);
@@ -856,7 +754,6 @@
       backdrop.classList.remove('is-open');
       setTimeout(() => { if (typeof afterClose === 'function') afterClose(); }, 240);
     }
-
     function syncSurpriseCheckboxState() {
       const cb = document.getElementById('surpriseShareCheckbox');
       if (!cb) return;
@@ -869,7 +766,6 @@
         parentLabel.classList.toggle('cursor-not-allowed', !active);
       }
     }
-
     function setWorldHiddenMode(hidden) {
       state.worldHidden = Boolean(hidden);
       saveState();
@@ -885,7 +781,6 @@
       if (dragHandle) dragHandle.setAttribute('aria-valuenow', state.worldHidden ? '100' : '0');
       document.body.classList.toggle('world-locked', state.worldHidden);
     }
-
     function renderHeaderAndSync() {
       const badge = document.getElementById('userBadge');
       const subStatus = document.getElementById('headerSubStatus');
@@ -896,15 +791,13 @@
       const activeShareCodeText = document.getElementById('activeShareCodeText');
       const activeParticipantText = document.getElementById('activeParticipantText');
       const trashBadge = document.getElementById('trashCountBadge');
-
       if (badge) badge.textContent = getDisplayBadge();
       if (quickNameInput && document.activeElement !== quickNameInput) quickNameInput.value = state.userName || '';
       if (shareNameInput && document.activeElement !== shareNameInput) shareNameInput.value = state.userName || '';
       if (shareCodeInput && document.activeElement !== shareCodeInput) shareCodeInput.value = state.shareCode || '';
-
       const activeCode = (state.shareCode || '').trim();
       const modeLabel = activeCode ? `Deelcode ${activeCode}` : 'Lokaal';
-      if (subStatus) subStatus.textContent = `Kerstlijstje • 2026 • ${modeLabel}`;
+      if (subStatus) subStatus.textContent = `Alexis' Kerstlijstje • 2026 • ${modeLabel}`;
       if (syncModeTag) {
         syncModeTag.textContent = activeCode ? `Gedeeld (${activeCode})` : 'Alleen lokaal';
         syncModeTag.className = activeCode ? 'text-[11px] sm:text-xs font-bold text-emerald-300 shrink-0' : 'text-[11px] sm:text-xs font-semibold text-slate-300/80 shrink-0';
@@ -917,19 +810,16 @@
         activeParticipantText.textContent = hasValidName() ? state.userName.trim() : 'Niet ingesteld';
         activeParticipantText.className = hasValidName() ? 'font-bold text-emerald-300' : 'font-bold text-amber-300';
       }
-
       const deletedCount = state.deletedItems.length;
       if (trashBadge) { trashBadge.textContent = String(deletedCount); trashBadge.classList.toggle('hidden', deletedCount === 0); }
       const mobileTrashBadge = document.getElementById('mobileTrashCountBadge');
       if (mobileTrashBadge) { mobileTrashBadge.textContent = String(deletedCount); mobileTrashBadge.classList.toggle('hidden', deletedCount === 0); }
-
       const totalCount = state.items.length;
       ['itemCountPill', 'shareItemCountPill', 'logItemCountPill'].forEach((id) => {
         const el = document.getElementById(id);
         if (el) el.textContent = `${totalCount} ${totalCount === 1 ? 'item' : 'items'}`;
       });
     }
-
     function renderBudget() {
       const totalSpent = state.items.reduce((acc, it) => acc + (Number(it.price) || 0), 0);
       const checkedSpent = state.items.filter((it) => it.checked).reduce((acc, it) => acc + (Number(it.price) || 0), 0);
@@ -952,7 +842,6 @@
         btn.classList.toggle('glass-btn-active', val === Number(state.budgetTarget));
       });
     }
-
     function renderCategories() {
       const row = document.getElementById('categoryFilterRow');
       if (!row) return;
@@ -967,7 +856,6 @@
         row.appendChild(btn);
       });
     }
-
     function renderWishlist() {
       renderBudget();
       const container = document.getElementById('wishlistItemsContainer');
@@ -981,7 +869,6 @@
       if (state.sortBy === 'price-desc') list.sort((a, b) => (Number(b.price) || 0) - (Number(a.price) || 0));
       else if (state.sortBy === 'price-asc') list.sort((a, b) => (Number(a.price) || 0) - (Number(b.price) || 0));
       else if (state.sortBy === 'name-asc') list.sort((a, b) => (a.name || '').localeCompare(b.name || '', 'nl'));
-
       if (list.length === 0) {
         container.innerHTML = `<div class="glass-card rounded-2xl p-6 text-center text-sm text-slate-300/80">Geen items gevonden die aan je filter voldoen.</div>`;
         return;
@@ -1060,7 +947,6 @@
         container.appendChild(card);
       });
     }
-
     function openItemDetail(itemId) {
       const item = state.items.find((it) => it.id === itemId);
       if (!item) return;
@@ -1073,31 +959,26 @@
       if (currentDetailLink) linkWrap.classList.remove('hidden'); else linkWrap.classList.add('hidden');
       openAnimatedModal('detailModal', 'detailCard');
     }
-
     function renderActivityLog() {
       const gateCard = document.getElementById('logGateCard');
       const listEl = document.getElementById('activityLogList');
       const subtitleEl = document.getElementById('logSubtitleText');
       const searchInput = document.getElementById('searchLogInput');
       if (searchInput && document.activeElement !== searchInput) searchInput.value = state.logSearchQuery || '';
-
-      // Alexis edition: logs always unlocked, no Naam*/Deelcode gate.
-      const unlocked = true;
-      if (gateCard) gateCard.classList.add('hidden');
-      if (listEl) listEl.classList.remove('hidden');
+      const unlocked = hasValidName() && hasActiveShare();
+      if (gateCard) gateCard.classList.toggle('hidden', unlocked);
+      if (listEl) listEl.classList.toggle('hidden', !unlocked);
       if (subtitleEl) {
-        subtitleEl.textContent = hasValidName() && hasActiveShare()
+        subtitleEl.textContent = unlocked
           ? `Actieve log voor ${state.userName.trim()} • Code ${state.shareCode.trim()}`
-          : 'Lokale activiteitenlog (geen deelcode actief)';
+          : 'Toegang & voorwaarden voor logweergave';
       }
-      if (!listEl) return;
-
+      if (!unlocked || !listEl) return;
       const q = (state.logSearchQuery || '').trim().toLowerCase();
       const filteredLogs = state.logs.filter((entry) => {
         if (!q) return true;
         return (entry.text || '').toLowerCase().includes(q) || (entry.time || '').toLowerCase().includes(q);
       });
-
       if (filteredLogs.length === 0) {
         listEl.innerHTML = `<div class="glass-card rounded-xl px-4 py-3 text-xs sm:text-sm text-slate-300/80">${q ? 'Geen logregels gevonden voor deze zoekopdracht.' : 'Nog geen activiteiten gelogd in deze sessie.'}</div>`;
         return;
@@ -1116,7 +997,6 @@
         listEl.appendChild(row);
       });
     }
-
     function renderDeletedModal() {
       const listEl = document.getElementById('deletedItemsList');
       const searchInput = document.getElementById('searchTrashInput');
@@ -1159,14 +1039,12 @@
         listEl.appendChild(row);
       });
     }
-
     function updateDockPillPosition(activeBtn) {
       const pill = document.getElementById('dockPill');
       if (!activeBtn || !pill) return;
       pill.style.width = `${activeBtn.offsetWidth}px`;
       pill.style.transform = `translateX(${activeBtn.offsetLeft - 6}px)`;
     }
-
     function switchTab(tabName) {
       if (state.worldHidden) setWorldHiddenMode(false);
       document.querySelectorAll('.tab-section').forEach((sec) => sec.classList.toggle('hidden', sec.id !== `tab-${tabName}`));
@@ -1180,7 +1058,6 @@
       });
       requestAnimationFrame(() => updateDockPillPosition(activeButton));
     }
-
     function bindEvents() {
       document.querySelectorAll('.dock-tab-btn').forEach((btn) => {
         btn.addEventListener('click', () => { const target = btn.getAttribute('data-tab-target'); if (target) switchTab(target); });
@@ -1203,7 +1080,6 @@
       if (searchInput) searchInput.addEventListener('input', (e) => { state.searchQuery = e.target.value; saveState(); renderWishlist(); });
       const sortSelect = document.getElementById('sortItemsSelect');
       if (sortSelect) sortSelect.addEventListener('change', (e) => { state.sortBy = e.target.value; saveState(); renderWishlist(); });
-
       document.getElementById('toggleWorldModeBtn').addEventListener('click', () => setWorldHiddenMode(!state.worldHidden));
       document.getElementById('topWorldCenterBtn').addEventListener('click', () => {
         setWorldHiddenMode(true);
@@ -1216,7 +1092,6 @@
           showToast('3D wereld gecentreerd.');
         }
       });
-
       const dragHandle = document.getElementById('sheetDragHandle');
       if (dragHandle) {
         let dragStartY = null;
@@ -1230,7 +1105,6 @@
           else if (deltaY < -36) setWorldHiddenMode(false);
         });
       }
-
       document.getElementById('joinShareCodeBtn').addEventListener('click', async () => {
         const nameVal = (document.getElementById('shareNameInput').value || state.userName || '').trim();
         const codeVal = (document.getElementById('shareCodeInput').value || '').trim().toUpperCase();
@@ -1239,7 +1113,6 @@
         try { await gwJoinShare(nameVal, codeVal); }
         catch (error) { showToast(`Joinen mislukt: ${error.message}`); }
       });
-
       document.getElementById('createShareCodeBtn').addEventListener('click', async () => {
         const nameVal = (document.getElementById('shareNameInput').value || state.userName || '').trim();
         if (!nameVal) return showToast('Vul eerst je Naam* in om een deelcode aan te maken.');
@@ -1247,7 +1120,6 @@
         try { await gwCreateShare(nameVal); }
         catch (error) { showToast(`Aanmaken mislukt: ${error.message}`); }
       });
-
       document.getElementById('leaveShareCodeBtn').addEventListener('click', () => {
         if (!hasActiveShare()) { showToast('Er is geen actieve deelcode om te verlaten.'); return; }
         pendingLeaveShareCode = true;
@@ -1255,7 +1127,6 @@
         if (sub) sub.textContent = `Weet je zeker dat je deelcode "${state.shareCode}" wilt verlaten?`;
         openAnimatedModal('leaveShareConfirmModal', 'leaveShareConfirmCard');
       });
-
       document.getElementById('confirmLeaveShareYesBtn').addEventListener('click', async () => {
         if (!pendingLeaveShareCode) return;
         pendingLeaveShareCode = false;
@@ -1275,17 +1146,14 @@
         saveState(); renderHeaderAndSync(); renderActivityLog();
         closeAnimatedModal('leaveShareConfirmModal', 'leaveShareConfirmCard', () => showToast(`Je hebt deelcode ${oldCode} verlaten.`));
       });
-
       document.getElementById('confirmLeaveShareNoBtn').addEventListener('click', () => {
         pendingLeaveShareCode = false;
         closeAnimatedModal('leaveShareConfirmModal', 'leaveShareConfirmCard');
       });
-
       document.getElementById('openAddModalBtn').addEventListener('click', () => { syncSurpriseCheckboxState(); openAnimatedModal('addItemModal', 'addItemCard'); });
       const mobileInlineAddBtn = document.getElementById('mobileInlineAddBtn');
       if (mobileInlineAddBtn) mobileInlineAddBtn.addEventListener('click', () => { syncSurpriseCheckboxState(); openAnimatedModal('addItemModal', 'addItemCard'); });
       document.getElementById('closeAddModalBtn').addEventListener('click', () => closeAnimatedModal('addItemModal', 'addItemCard'));
-
       document.getElementById('addItemForm').addEventListener('submit', (e) => {
         e.preventDefault();
         const name = (document.getElementById('itemNameInput').value || '').trim();
@@ -1302,10 +1170,8 @@
         e.target.reset();
         closeAnimatedModal('addItemModal', 'addItemCard', () => showToast(`"${name}" toegevoegd aan de lijst!`));
       });
-
       document.getElementById('closeDetailModalBtn').addEventListener('click', () => closeAnimatedModal('detailModal', 'detailCard'));
       document.getElementById('detailLinkOpenBtn').addEventListener('click', () => triggerOpenLink(currentDetailLink));
-
       document.getElementById('confirmDeleteYesBtn').addEventListener('click', () => {
         if (!pendingDeleteId) return;
         const idx = state.items.findIndex((it) => it.id === pendingDeleteId);
@@ -1321,17 +1187,14 @@
         }
       });
       document.getElementById('confirmDeleteNoBtn').addEventListener('click', () => { pendingDeleteId = null; closeAnimatedModal('deleteConfirmModal', 'deleteConfirmCard'); });
-
       document.getElementById('openTrashBtn').addEventListener('click', () => { renderDeletedModal(); openAnimatedModal('deletedItemsModal', 'deletedItemsCard'); });
       const mobileInlineTrashBtn = document.getElementById('mobileInlineTrashBtn');
       if (mobileInlineTrashBtn) mobileInlineTrashBtn.addEventListener('click', () => { renderDeletedModal(); openAnimatedModal('deletedItemsModal', 'deletedItemsCard'); });
       document.getElementById('closeDeletedModalBtn').addEventListener('click', () => closeAnimatedModal('deletedItemsModal', 'deletedItemsCard'));
-
       const searchTrashInput = document.getElementById('searchTrashInput');
       if (searchTrashInput) searchTrashInput.addEventListener('input', (e) => { state.trashSearchQuery = e.target.value; saveState(); renderDeletedModal(); });
       const searchLogInput = document.getElementById('searchLogInput');
       if (searchLogInput) searchLogInput.addEventListener('input', (e) => { state.logSearchQuery = e.target.value; saveState(); renderActivityLog(); });
-
       document.getElementById('exportJsonBtn')?.addEventListener('click', gwExportJson);
       document.getElementById('importJsonBtn')?.addEventListener('click', () => document.getElementById('importJsonInput')?.click());
       document.getElementById('importJsonInput')?.addEventListener('change', async (e) => {
@@ -1340,7 +1203,6 @@
         finally { e.target.value = ''; }
       });
     }
-
     function createGlassWaveEarthTexture() {
       const texCanvas = document.createElement('canvas');
       texCanvas.width = 512; texCanvas.height = 256;
@@ -1402,7 +1264,6 @@
       texture.needsUpdate = true;
       return texture;
     }
-
     function initThreeGlobeAndSnow() {
       const canvas = document.getElementById('globeCanvas');
       if (!canvas || typeof THREE === 'undefined') return;
@@ -1413,7 +1274,6 @@
         const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
         renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
         renderer.setSize(window.innerWidth, window.innerHeight);
-
         scene.add(new THREE.AmbientLight(0x7dd3fc, 0.52));
         const dirLight = new THREE.DirectionalLight(0xe0f2fe, 0.72);
         dirLight.position.set(5, 3.5, 5.5);
@@ -1421,20 +1281,17 @@
         const rimLight = new THREE.PointLight(0x38bdf8, 0.55, 18);
         rimLight.position.set(-5, -2.5, 4);
         scene.add(rimLight);
-
         const earthGeo = new THREE.SphereGeometry(1.65, 80, 80);
         const globeTexture = createGlassWaveEarthTexture();
         const earthMat = new THREE.MeshPhongMaterial({ map: globeTexture, emissive: 0x05132b, specular: 0x38bdf8, shininess: 14, wireframe: false });
         const earthMesh = new THREE.Mesh(earthGeo, earthMat);
         earthMesh.position.set(0, 0.12, 0);
         scene.add(earthMesh);
-
         const atmoGeo = new THREE.SphereGeometry(1.73, 64, 64);
         const atmoMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.11, side: THREE.BackSide });
         const atmoMesh = new THREE.Mesh(atmoGeo, atmoMat);
         atmoMesh.position.copy(earthMesh.position);
         scene.add(atmoMesh);
-
         const snowCount = 520;
         const snowGeo = new THREE.BufferGeometry();
         const snowPositions = new Float32Array(snowCount * 3);
@@ -1446,7 +1303,6 @@
           snowSpeeds[i] = 0.008 + Math.random() * 0.014;
         }
         snowGeo.setAttribute('position', new THREE.BufferAttribute(snowPositions, 3));
-
         const snowCanvas = document.createElement('canvas');
         snowCanvas.width = 64; snowCanvas.height = 64;
         const sCtx = snowCanvas.getContext('2d');
@@ -1459,10 +1315,8 @@
         const snowMat = new THREE.PointsMaterial({ size: 0.085, map: snowTexture, transparent: true, opacity: 0.85, depthWrite: false });
         const snowPoints = new THREE.Points(snowGeo, snowMat);
         scene.add(snowPoints);
-
         let targetRotY = 0.35, targetRotX = 0.18, isDragging = false, prevX = 0, prevY = 0;
         window.__resetGlassWorldCamera = function () { targetRotY = 0.35; targetRotX = 0.18; };
-
         window.addEventListener('pointerdown', (e) => {
           if (e.target.closest('#glassSheet, nav, button, input, select, textarea, .gw-modal-card')) return;
           isDragging = true; prevX = e.clientX; prevY = e.clientY;
@@ -1480,7 +1334,6 @@
           camera.updateProjectionMatrix();
           renderer.setSize(window.innerWidth, window.innerHeight);
         });
-
         function animateGlobe() {
           requestAnimationFrame(animateGlobe);
           if (!isDragging) targetRotY += 0.0045;
@@ -1501,13 +1354,10 @@
         animateGlobe();
       } catch (err) { console.error('3D globe fout:', err); }
     }
-
-    // ---- Deployment gate: locked to sic-corporation.github.io/SICAlexisKerstmis/ ----
     const GW_CANONICAL_HOST = 'sic-corporation.github.io';
     const GW_CANONICAL_PATH = '/SICAlexisKerstmis/';
     let gwBlockedOverlay = null;
     let gwGateObserver = null;
-
     function gwIsCanonicalDeployment() {
       const path = window.location.pathname;
       const normalizedPath = path.endsWith('/') ? path : `${path}/`;
@@ -1515,7 +1365,6 @@
         window.location.hostname.toLowerCase() === GW_CANONICAL_HOST &&
         normalizedPath === GW_CANONICAL_PATH;
     }
-
     function gwShowDeploymentBlock() {
       if (!document.body) return;
       document.documentElement.style.overflow = 'hidden';
@@ -1539,7 +1388,6 @@
         document.body.appendChild(gwBlockedOverlay);
       }
     }
-
     function applyCopyAndDomainGuard() {
       if (gwIsCanonicalDeployment()) return true;
       gwShowDeploymentBlock();
@@ -1555,7 +1403,6 @@
       }, 750);
       return false;
     }
-
     window.addEventListener('DOMContentLoaded', () => {
       if (!applyCopyAndDomainGuard()) return;
       bindEvents();
@@ -1566,7 +1413,6 @@
       setWorldHiddenMode(state.worldHidden);
       switchTab('lijst');
       initThreeGlobeAndSnow();
-
       if (GW_API_ENABLED && hasActiveShare() && gwGetShareToken()) {
         gwPullSharedState().catch((error) => {
           console.error('Kon gedeelde lijst niet laden:', error);
